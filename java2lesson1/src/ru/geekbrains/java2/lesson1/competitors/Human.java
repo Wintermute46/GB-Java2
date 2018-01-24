@@ -51,4 +51,7 @@ public class Human implements Competitor {
     }
 
 
+    public String getName() {
+        return name;
+    }
 }
