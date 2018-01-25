@@ -13,9 +13,10 @@ public class Human implements Competitor {
 
     public Human(String name) {
         this.name = name;
-        this.maxRunDistance = 5000;
-        this.maxJumpHeight = 20;
-        this.maxSwimDistance = 500;
+        //делаем людей разными
+        this.maxRunDistance = (int)(2000 + Math.random() * 3000);   //человек бежит от 2 до 5 км
+        this.maxJumpHeight = (int)(5 + Math.random() * 15);     //человек прыгает от 5 до 20 м
+        this.maxSwimDistance = (int)(100 + Math.random() * 900);    //человек проплывает от 100 м до 1 км;
         this.active = true;
     }
 
@@ -53,5 +54,17 @@ public class Human implements Competitor {
 
     public String getName() {
         return name;
+    }
+
+    public int getMaxRunDistance() {
+        return maxRunDistance;
+    }
+
+    public int getMaxJumpHeight() {
+        return maxJumpHeight;
+    }
+
+    public int getMaxSwimDistance() {
+        return maxSwimDistance;
     }
 }
